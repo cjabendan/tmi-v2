@@ -4,7 +4,7 @@ import logo from "../../public/assets/icons/logo/logo.png";
 import Button from "../ui/button";
 import { Menu } from "lucide-react";
 
-import Link from "next/link";
+import Links from "../ui/links";
 
 export default function Header() {
   return (
@@ -32,22 +32,22 @@ export default function Header() {
           className="block min-[840px]:hidden"
         />
 
-        <div className="hidden min-[840px]:flex gap-4 items-center">
-          <Link className="nav-link" href="#top">
+        <div className="hidden min-[840px]:flex gap-5 items-center">
+          <Links variant="primary" href="#top">
             Home
-          </Link>
-          <Link className="nav-link" href="#about">
+          </Links>
+          <Links variant="primary" href="#about">
             About Us
-          </Link>
-          <Link className="nav-link" href="#services">
+          </Links>
+          <Links variant="primary" href="#services">
             Services
-          </Link>
-          <Link className="nav-link" href="#careers">
+          </Links>
+          <Links variant="primary" href="#careers">
             Careers
-          </Link>
-          <Link className="nav-link" href="#contact">
+          </Links>
+          <Links variant="primary" href="#contact">
             Contact Us
-          </Link>
+          </Links>
           <Button variant="primary">Apply Now</Button>
         </div>
       </div>

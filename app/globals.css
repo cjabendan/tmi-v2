@@ -21,12 +21,18 @@
   --color-tertiary: var(--tertiary);
   --color-action: var(--action);
   --color-gray: var(--gray);
+
+  --background-image-maritime-gradient: linear-gradient(
+    135deg,
+    var(--color-primary),
+    var(--color-secondary)
+  );
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
+
     --background: #ffffff;
     --foreground: #000000;
   }
 }
-
