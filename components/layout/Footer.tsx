@@ -12,7 +12,7 @@ export default function Footer() {
       {/* Upper Section */}
       <div className="mx-auto max-w-7xl px-6 pt-12 md:pt-16 pb-12 lg:px-8">
         <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-8 pb-12">
-          <h2 className="text-xl sm:text-3xl font-medium max-w-md tracking-tight leading-snug">
+          <h2 className="text-xl sm:text-4xl font-medium max-w-md tracking-tight leading-snug">
             Your Trusted Partner in Marine Solutions — Securing Excellence at
             Sea.
           </h2>
@@ -38,7 +38,7 @@ export default function Footer() {
         {/* Middle Section */}
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
           <div className="flex flex-col gap-4">
-            <h3 className="text-xs font-bold tracking-widest text-white/50 uppercase">
+            <h3 className="text-xs font-bold tracking-widest text-white uppercase">
               Contact Information
             </h3>
             {/* Loop Contacts */}
@@ -89,7 +89,7 @@ export default function Footer() {
           {/* Loop Columns*/}
           {columns.map((col, colIndex) => (
             <div key={colIndex} className="flex flex-col gap-4">
-              <h3 className="text-xs font-bold tracking-widest text-white/50 uppercase">
+              <h3 className="text-xs font-bold tracking-widest text-white uppercase">
                 {col.title}
               </h3>
               <div className="flex flex-col gap-2 text-sm text-white/80">
