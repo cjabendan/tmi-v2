@@ -1,10 +1,11 @@
 import Image from "next/image";
 import logo from "../../public/assets/icons/logo/logo.png";
 
-import Button from "../ui/button";
+
 import { Menu } from "lucide-react";
 
-import Links from "../ui/links";
+import Links from "../ui/Links";
+import Button from "../ui/Button";
 
 export default function Header() {
   return (

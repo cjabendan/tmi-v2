@@ -1,201 +1,117 @@
 import Link from "next/link";
-import { Mail, Phone, MoveRight } from "lucide-react";
-import Links from "../ui/links";
+import Image from "next/image";
+import { MoveRight } from "lucide-react";
+import Links from "../ui/Links";
+
+import { contacts, socials, columns } from "@/data/links.json";
+import Button from "../ui/Button";
 
 export default function Footer() {
   return (
     <footer className="bg-tertiary text-white w-full">
-      {/* ================= UPPER SECTION (Constrained Container) ================= */}
+      {/* Upper Section */}
       <div className="mx-auto max-w-7xl px-6 pt-12 md:pt-16 pb-12 lg:px-8">
-        {/* TOP ROW */}
         <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-8 pb-12">
-          {/* Tagline / Catchphrase */}
-          <h2 className="text-xl sm:text-3xl font-normal max-w-md tracking-tight leading-snug">
+          <h2 className="text-xl sm:text-3xl font-medium max-w-md tracking-tight leading-snug">
             Your Trusted Partner in Marine Solutions — Securing Excellence at
             Sea.
           </h2>
-
-          {/* Newsletter / Pill-shaped Subscribe */}
+          {/* Newsletter Form */}
           <div className="flex flex-col gap-3 w-full md:max-w-md">
             <span className="text-sm sm:text-lg font-medium tracking-wider">
-              Subscribe for Updates and Career Opportunities
+              Stay Connected: Receive Company News and Career Insights
             </span>
-            <form className="flex items-center justify-between border border-white/20 rounded-full p-1 pl-4 bg-transparent focus-within:border-white/45 transition-colors">
+            <form className="flex items-center justify-between border border-white/20 rounded-sm p-1 pl-4 bg-transparent focus-within:border-white/45 transition-colors">
               <input
                 type="email"
                 placeholder="Enter your email"
                 className="w-full bg-transparent text-sm text-white placeholder-white/50 focus:outline-none"
                 required
               />
-              <button
-                type="submit"
-                className="px-6 py-2 bg-primary hover:bg-primary-light transition-colors text-white text-sm font-medium rounded-full shrink-0"
-              >
+              <Button variant="primary" className="shrink-0">
                 Subscribe
-              </button>
+              </Button>
             </form>
           </div>
         </div>
 
-        {/* MIDDLE COLUMNS */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
-          {/* Column 1: Contact Info */}
+        {/* Middle Section */}
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
           <div className="flex flex-col gap-4">
             <h3 className="text-xs font-bold tracking-widest text-white/50 uppercase">
               Contact Information
             </h3>
-            <div className="flex flex-col gap-3 text-sm text-white/80">
-              <li className="flex items-center gap-3">
-                <Mail className="h-5 w-5 text-primary shrink-0" />
-                <a
-                  href="mailto:support@tutelamarine.com"
-                  className="hover:text-white transition-colors"
+            {/* Loop Contacts */}
+            <div className="flex flex-col gap-3">
+              {contacts.map((contact) => (
+                <Links
+                  key={contact.label}
+                  variant="default"
+                  link={contact.href}
+                  icon={
+                    <Image
+                      src={contact.svgPath}
+                      alt={contact.label}
+                      width={20}
+                      height={20}
+                      className="h-4 w-4 invert opacity-60"
+                    />
+                  }
                 >
-                  support@tutelamarine.com
-                </a>
-              </li>
-              <li className="flex items-center gap-3">
-                <Phone className="h-5 w-5 text-primary shrink-0" />
-                <a
-                  href="tel:+180032328686"
-                  className="hover:text-white transition-colors"
+                  {contact.label}
+                </Links>
+              ))}
+            </div>
+
+            {/* Loop Socials */}
+            <div className="flex items-center flex-wrap gap-3">
+              {socials.map((social) => (
+                <Link
+                  key={social.id}
+                  href={social.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="transition-all items-center justify-center"
+                  aria-label={social.platform}
                 >
-                  1800-3232-8686
-                </a>
-              </li>
-            </div>
-            <div className="flex items-center gap-4 mt-2">
-              <a
-                href="#"
-                className="p-2 bg-white/10 hover:bg-white/20 transition-colors rounded-full"
-                aria-label="Facebook"
-              >
-                <Phone className="h-5 w-5 fill-white text-transparent" />
-              </a>
-              <a
-                href="#"
-                className="p-2 bg-white/10 hover:bg-white/20 transition-colors rounded-full"
-                aria-label="Instagram"
-              >
-                <Phone className="h-5 w-5 text-white" />
-              </a>
-              <a
-                href="#"
-                className="p-2 bg-white/10 hover:bg-white/20 transition-colors rounded-full"
-                aria-label="Youtube"
-              >
-                <Phone className="h-5 w-5 fill-white text-transparent" />
-              </a>
+                  <Image
+                    src={social.svgPath}
+                    alt={social.platform}
+                    width={20}
+                    height={20}
+                    className="h-5 w-5 sm:h-7 sm:w-7 invert opacity-60 hover:opacity-100 transition-opacity"
+                  />
+                </Link>
+              ))}
             </div>
           </div>
 
-          {/* Column 2: Company */}
-          <div className="flex flex-col gap-4">
-            <h3 className="text-xs font-bold tracking-widest text-white/50 uppercase">
-              Company
-            </h3>
-            <div className="flex flex-col gap-2 text-sm text-white/80">
-              <Links
-                variant="secondary"
-                href="/branches"
-                icon={<MoveRight className="h-4 w-4 shrink-0" />}
-              >
-                Branches
-              </Links>
-
-              <Links
-                variant="secondary"
-                href="#about"
-                icon={<MoveRight className="h-4 w-4 shrink-0" />}
-              >
-                About Us
-              </Links>
-
-              <Links
-                variant="secondary"
-                href="#contact"
-                icon={<MoveRight className="h-4 w-4 shrink-0" />}
-              >
-                Community
-              </Links>
-
-              <Links
-                variant="secondary"
-                href="#careers"
-                icon={<MoveRight className="h-4 w-4 shrink-0" />}
-              >
-                Seafearers
-              </Links>
+          {/* Loop Columns*/}
+          {columns.map((col, colIndex) => (
+            <div key={colIndex} className="flex flex-col gap-4">
+              <h3 className="text-xs font-bold tracking-widest text-white/50 uppercase">
+                {col.title}
+              </h3>
+              <div className="flex flex-col gap-2 text-sm text-white/80">
+                {col.links.map((item, itemIndex) => (
+                  <Links
+                    key={itemIndex}
+                    variant="secondary"
+                    link={item.href}
+                    icon={
+                      <MoveRight className="h-3 w-3 sm:h-4 sm:w-4 shrink-0" />
+                    }
+                  >
+                    {item.label}
+                  </Links>
+                ))}
+              </div>
             </div>
-          </div>
-
-          {/* Column 3: Quick Links */}
-          <div className="flex flex-col gap-4">
-            <h3 className="text-xs font-bold tracking-widest text-white/50 uppercase">
-              Quick Links
-            </h3>
-            <div className="flex flex-col gap-2 text-sm text-white/80">
-              <Links
-                variant="secondary"
-                href="#faq"
-                icon={<MoveRight className="h-4 w-4 shrink-0" />}
-              >
-                Careers
-              </Links>
-
-              <Links
-                variant="secondary"
-                href="#help"
-                icon={<MoveRight className="h-4 w-4 shrink-0" />}
-              >
-                Trainings
-              </Links>
-
-              <Links
-                variant="secondary"
-                href="#support"
-                icon={<MoveRight className="h-4 w-4 shrink-0" />}
-              >
-                Contact
-              </Links>
-            </div>
-          </div>
-
-          {/* Column 4: Help */}
-          <div className="flex flex-col gap-4">
-            <h3 className="text-xs font-bold tracking-widest text-white/50 uppercase">
-              Help & Support
-            </h3>
-            <div className="flex flex-col gap-2 text-sm text-white/80">
-              <Links
-                variant="secondary"
-                href="#faq"
-                icon={<MoveRight className="h-4 w-4 shrink-0" />}
-              >
-                FAQ
-              </Links>
-
-              <Links
-                variant="secondary"
-                href="#help"
-                icon={<MoveRight className="h-4 w-4 shrink-0" />}
-              >
-                Help Center
-              </Links>
-
-              <Links
-                variant="secondary"
-                href="#support"
-                icon={<MoveRight className="h-4 w-4 shrink-0" />}
-              >
-                Support
-              </Links>
-            </div>
-          </div>
+          ))}
         </div>
       </div>
 
-      {/* Bottom Bar */}
+      {/* Bottom Section */}
       <div className="w-full bg-maritime-gradient border-t border-white/10 py-6 text-xs sm:text-sm text-white/80">
         <div className="mx-auto max-w-7xl px-6 flex flex-col md:flex-row items-center justify-between gap-4 lg:px-8">
           <div className="flex flex-col sm:flex-row items-center gap-2 sm:gap-4">

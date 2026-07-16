@@ -2,7 +2,7 @@ import Link from "next/link";
 import { AnchorHTMLAttributes, ReactNode } from "react";
 
 interface LinkProps extends AnchorHTMLAttributes<HTMLAnchorElement> {
-  variant?: "primary" | "secondary";
+  variant?: "primary" | "secondary" | "default";
   link?: string;
   icon?: ReactNode;
 }
@@ -20,9 +20,9 @@ export default function Links({
 
   const variantClasses = {
     primary: "text-gray-600/80 font-medium hover:text-primary",
-    secondary: "text-white/80 hover:opacity-90",
-  }
-  [variant];
+    secondary: "text-white/60 hover:text-white/100",
+    default: "text-white/60 hover:text-white/100",
+  }[variant];
 
   return (
     <Link

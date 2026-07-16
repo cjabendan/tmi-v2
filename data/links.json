@@ -1,0 +1,61 @@
+{
+  "socials": [
+    {
+      "id": 1,
+      "platform": "Facebook",
+      "link": "null",
+      "svgPath": "/assets/icons/facebook.svg"
+    },
+    {
+      "id": 2,
+      "platform": "LinkedIn",
+      "link": "hnull",
+      "svgPath": "/assets/icons/linkedin.svg"
+    },
+    {
+      "id": 3,
+      "platform": "Twitter",
+      "link": "null",
+      "svgPath": "/assets/icons/twitter.svg"
+    }
+  ],
+  "contacts": [
+    {
+      "label": "support@tutelamarine.com",
+      "href": "null",
+      "svgPath": "/assets/icons/mail.svg"
+    },
+    {
+      "label": "1800-3232-8686",
+      "href": "null",
+      "svgPath": "/assets/icons/call.svg"
+    }
+  ],
+  "columns": [
+    {
+      "title": "Company",
+      "links": [
+        { "label": "Branches", "href": "/branches" },
+        { "label": "About Us", "href": "#about" },
+        { "label": "Community", "href": "#contact" },
+        { "label": "Seafearers", "href": "#careers" }
+      ]
+    },
+    {
+      "title": "Quick Links",
+      "links": [
+        { "label": "Careers", "href": "#faq" },
+        { "label": "Trainings", "href": "#help" },
+        { "label": "Contact", "href": "#support" }
+      ]
+    },
+    {
+      "title": "Help & Support",
+      "links": [
+        { "label": "FAQ", "href": "#faq" },
+        { "label": "Help Center", "href": "#help" },
+        { "label": "Support", "href": "#support" }
+      ]
+    }
+  ]
+}
