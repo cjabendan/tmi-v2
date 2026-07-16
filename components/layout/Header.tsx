@@ -15,12 +15,12 @@ export default function Header() {
           <Image
             src={logo}
             alt="TMI logo"
-            className="h-12 w-auto object-contain"
+            className="h-10 sm:h-12 w-auto object-contain"
             priority
           />
           <div className="flex flex-col leading-tight text-primary uppercase">
             <h1 className="text-xl font-black tracking-wider">TMI</h1>
-            <div className="text-xs font-bold pl-1 tracking-wide">
+            <div className="hidden sm:block text-xs font-bold pl-1 tracking-wide">
               TUTELA MARINE INC.
             </div>
           </div>
@@ -29,7 +29,7 @@ export default function Header() {
         {/* Menu Btn for Mobile Layout */}
         <Button
           variant="default"
-          icon={<Menu className="w-4 h-4" />}
+          icon={<Menu className="w-6 h-6" />}
           className="block min-[840px]:hidden"
         />
 
