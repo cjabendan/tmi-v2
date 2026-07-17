@@ -10,7 +10,7 @@ export default function Middle() {
      <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
           <div className="flex flex-col gap-4">
             <h3 className="text-xs font-bold tracking-widest text-white uppercase">
-              Contact Information
+              Contact Us
             </h3>
             {/* Loop Contacts */}
             <div className="flex flex-col gap-3">
@@ -18,7 +18,7 @@ export default function Middle() {
                 <Links
                   key={contact.label}
                   variant="default"
-                  link={contact.href}
+                  href={contact.href}
                   icon={
                     <Image
                       src={contact.svgPath}
@@ -67,7 +67,7 @@ export default function Middle() {
                   <Links
                     key={itemIndex}
                     variant="secondary"
-                    link={item.href}
+                    href={item.href}
                     icon={
                       <MoveRight className="h-3 w-3 sm:h-4 sm:w-4 shrink-0" />
                     }

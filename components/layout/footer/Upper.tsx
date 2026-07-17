@@ -6,6 +6,7 @@ export default function Upper() {
       <h2 className="text-2xl sm:text-4xl font-medium max-w-md tracking-tight leading-snug">
         Your Trusted Partner in Marine Solutions — Securing Excellence at Sea.
       </h2>
+      <div className="block sm:hidden h-[1px] w-28 bg-background"></div>
       {/* Newsletter Form */}
       <div className="flex flex-col gap-4 w-full md:max-w-md">
         <span className="text-sm sm:text-xl font-medium tracking-wider">

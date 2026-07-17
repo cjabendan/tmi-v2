@@ -18,7 +18,7 @@ export default function Header() {
             className="h-10 sm:h-12 w-auto object-contain"
             priority
           />
-          <div className="flex flex-col leading-tight text-primary uppercase">
+          <div className="flex flex-col leading-tight text-tertiary uppercase">
             <h1 className="text-xl font-black tracking-wider">TMI</h1>
             <div className="hidden sm:block text-xs font-bold pl-1 tracking-wide">
               TUTELA MARINE INC.

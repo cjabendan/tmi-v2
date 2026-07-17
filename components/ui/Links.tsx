@@ -3,7 +3,7 @@ import { AnchorHTMLAttributes, ReactNode } from "react";
 
 interface LinkProps extends AnchorHTMLAttributes<HTMLAnchorElement> {
   variant?: "primary" | "secondary" | "default";
-  link?: string;
+  href?: string;
   icon?: ReactNode;
 }
 
@@ -11,32 +11,31 @@ export default function Links({
   variant = "primary",
   icon,
   children,
-  link = "#",
+  href = "#",
   className = "",
   ...props
 }: LinkProps) {
   const baseClasses =
-    "inline-flex items-center rounded-sm text-sm sm:text-base transition-all duration-200 min-h-0 min-w-0 cursor-pointer text-left whitespace-nowrap select-none";
+    "inline-flex text-sm sm:text-base transition-all duration-200 min-h-0 min-w-0 cursor-pointer text-left whitespace-nowrap select-none leading-none";
 
   const variantClasses = {
     primary: "text-gray-600/80 font-medium hover:text-primary",
     secondary: "text-white/60 hover:text-white/100",
-    default: "text-white/60 hover:text-white/100",
+    default: "text-white/80 hover:text-white/100",
   }[variant];
 
   return (
     <Link
-      href={link}
+      href={href}
       className={`${baseClasses} ${variantClasses} ${className}`}
       {...props}
     >
-      {icon && variant !== "secondary" && (
+      {icon && variant === "primary" && (
         <span className="shrink-0 flex items-center mr-2">{icon}</span>
       )}
 
-      <span className="block truncate items-center">{children}</span>
-
-      {icon && variant === "secondary" && (
+      <span className="block truncate">{children}</span>
+      {icon && (variant === "secondary" || variant === "default") && (
         <span className="shrink-0 flex items-center ml-2">{icon}</span>
       )}
     </Link>
