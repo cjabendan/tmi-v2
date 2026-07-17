@@ -8,14 +8,14 @@ function Hero(): React.JSX.Element {
   return (
     <section className="w-full relative overflow-visible mx-auto">
       <div
-        className="absolute top-0 left-0 w-full h-[70vh] sm:h-[80vh] bg-cover bg-[position:65%_center] md:bg-right-center bg-no-repeat z-1"
+        className="absolute top-0 left-0 w-full h-[60vh] sm:h-[80vh] bg-cover bg-[position:65%_center] md:bg-right-center bg-no-repeat z-1"
         style={{
-          backgroundImage: `linear-gradient(to right, rgba(0, 86, 177, 0.9) 0%, rgba(0, 86, 177, 0.4) 50%, rgba(40, 167, 70, 0.3) 100%), url('/assets/image/background/hero-bg.png')`,
+          backgroundImage: `linear-gradient(to right, rgba(0, 86, 177, 0.9) 0%, rgba(0, 86, 177, 0.4) 50%, rgba(40, 167, 70, 0.45) 100%), url('/assets/image/background/hero-bg.png')`,
         }}
       />
 
       {/* Hero Content Area */}
-      <div className="relative z-2 w-full h-[70vh] sm:h-[80vh] flex flex-col justify-center mx-auto max-w-7xl px-6">
+      <div className="relative z-2 w-full h-[60vh] sm:h-[80vh] flex flex-col justify-center mx-auto max-w-7xl px-6">
         <div className="flex flex-col max-w-[620px] text-secondary items-start gap-0 sm:gap-2">
           <span className="text-xs sm:text-sm font-bold tracking-[3px] uppercase text-green-400 mb-3 drop-shadow-md">
             Tutela Marine Inc.
