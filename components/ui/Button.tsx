@@ -18,9 +18,9 @@ export default function Button({
 
   const variantClasses = {
     primary:
-      "font-semibold items-center bg-action text-white hover:opacity-90 shadow-xs",
+      "font-semibold bg-action text-white hover:opacity-90 shadow-xs",
     secondary:
-      "px-4 sm:gap-2 items-center border border-gray-200 dark:border-gray-700/80 bg-transparent text-black dark:text-white dark:hover:bg-zinc-100/12",
+      "font-semibold bg-secondary text-white",
     default:
       "text-gray p-0",
   }[variant];
