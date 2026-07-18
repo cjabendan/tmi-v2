@@ -3,7 +3,7 @@ import GradientIcon from "../ui/GradientIcon";
 
 export default function StatsCard() {
   return (
-    <div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 w-[calc(100%-2rem)] max-w-7xl z-5 px-4">
+    <div className="absolute bottom-30 left-1/2 -translate-x-1/2 translate-y-1/2 w-[calc(100%-2rem)] max-w-7xl z-5 px-4">
       <div className="hidden min-[840px]:flex flex-row w-full py-8 rounded-lg bg-white shadow-[0_10px_30px_rgba(0,0,0,0.1)] overflow-hidden">
         {/* Stat Item 1 */}
         <div className="bg-white min-w-0 flex items-center justify-center text-left gap-[14px] flex-1 p-6 md:p-0 border-b md:border-b-0 md:border-l border-blue-500/20 first:border-l-0">

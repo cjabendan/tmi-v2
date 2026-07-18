@@ -23,7 +23,7 @@ export default function Button({
       "bg-white/10 backdrop-blur-md text-white border border-white/20 font-medium rounded-lg hover:bg-white/20",
     solid:
       "bg-white text-tertiary font-semibold rounded-lg shadow-lg hover:bg-opacity-90",
-    default: "text-gray p-0",
+    default: "text-white/80 p-0",
   }[variant];
 
   return (
