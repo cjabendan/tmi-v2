@@ -34,19 +34,19 @@ export default function Header() {
         />
 
         <div className="hidden min-[840px]:flex gap-5 items-center">
-          <Links variant="primary" href="#top">
+          <Links variant="default" href="#top">
             Home
           </Links>
-          <Links variant="primary" href="#about">
+          <Links variant="default" href="#about">
             About Us
           </Links>
-          <Links variant="primary" href="#services">
+          <Links variant="default" href="#services">
             Services
           </Links>
-          <Links variant="primary" href="#careers">
+          <Links variant="default" href="#careers">
             Careers
           </Links>
-          <Links variant="primary" href="#contact">
+          <Links variant="default" href="#contact">
             Contact Us
           </Links>
           <Button variant="primary">Apply Now</Button>

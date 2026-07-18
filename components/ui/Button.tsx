@@ -1,7 +1,7 @@
 import { ButtonHTMLAttributes, ReactNode } from "react";
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
-  variant?: "primary" | "secondary" | "default";
+  variant?: "primary" | "secondary" | "transparent" | "solid" | "default";
   icon?: ReactNode;
 }
 
@@ -12,17 +12,18 @@ export default function Button({
   className = "",
   ...props
 }: ButtonProps) {
-  
   const baseClasses =
-    "inline-flex ustify-center items-center px-4 py-2 items-center rounded-sm text-xs sm:text-sm transition-all duration-200 min-h-0 min-w-0 cursor-pointer text-left whitespace-nowrap select-none";
+    "inline-flex justify-center items-center px-6 py-3 rounded-sm text-xs sm:text-base transition-all duration-200 min-h-0 min-w-0 cursor-pointer text-left whitespace-nowrap select-none gap-2";
 
   const variantClasses = {
     primary:
-      "font-semibold bg-action text-white hover:opacity-90 shadow-xs",
-    secondary:
-      "font-semibold bg-secondary text-white",
-    default:
-      "text-gray p-0",
+      "text-white font-medium bg-action text-white hover:opacity-90 shadow-xs",
+    secondary: "font-medium bg-secondary text-white",
+    transparent:
+      "bg-white/10 backdrop-blur-md text-white border border-white/20 font-medium rounded-lg hover:bg-white/20",
+    solid:
+      "bg-white text-tertiary font-semibold rounded-lg shadow-lg hover:bg-opacity-90",
+    default: "text-gray p-0",
   }[variant];
 
   return (
@@ -30,19 +31,13 @@ export default function Button({
       className={`${baseClasses} ${variantClasses} ${className}`}
       {...props}
     >
-      {icon && variant !== "default" && (
-        <span className="shrink-0 flex items-center">
-          {icon}
-        </span>
+      {icon && variant === "primary" && (
+        <span className="shrink-0 flex items-center">{icon}</span>
       )}
 
-      <span className="block truncate items-center">
-        {children}
-      </span>
-      {icon && variant === "default" && (
-        <span className="shrink-0 flexWS">
-          {icon}
-        </span>
+      <span className="block truncate">{children}</span>
+      {icon && variant !== "primary" && (
+        <span className="shrink-0 flex items-center">{icon}</span>
       )}
     </button>
   );

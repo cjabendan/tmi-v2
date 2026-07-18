@@ -19,9 +19,9 @@ export default function Links({
     "inline-flex text-sm sm:text-base transition-all duration-200 min-h-0 min-w-0 cursor-pointer text-left whitespace-nowrap select-none leading-none";
 
   const variantClasses = {
-    primary: "text-gray-600/80 font-medium hover:text-primary",
+    primary: "text-white/60 hover:text-white/100",
     secondary: "text-white/60 hover:text-white/100",
-    default: "text-white/80 hover:text-white/100",
+    default: "text-gray-600/80 font-medium hover:text-primary",
   }[variant];
 
   return (

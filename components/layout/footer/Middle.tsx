@@ -17,7 +17,7 @@ export default function Middle() {
               {contacts.map((contact) => (
                 <Links
                   key={contact.label}
-                  variant="default"
+                  variant="primary"
                   href={contact.href}
                   icon={
                     <Image
