@@ -79,7 +79,7 @@ export default function GradientIcon({
  if (variant === "circle") {
   return (
     <div
-      className={`w-[60px] h-[60px] rounded-full flex items-center justify-center shrink-0 bg-slate-900 bg-gradient-to-br from-[#1CACE6] to-[#08FD41] shadow-lg ${className}`}
+      className={`w-[50px] h-[50px] rounded-xl flex items-center justify-center shrink-0 bg-slate-900 bg-gradient-to-br from-[#1CACE6] to-[#08FD41] shadow-lg ${className}`}
     >
       {baseSvg}
     </div>
