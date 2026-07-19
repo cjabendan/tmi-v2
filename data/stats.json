@@ -1,0 +1,20 @@
+[
+  {
+    "id": "vessels",
+    "icon": "vessel",
+    "value": 30,
+    "label": "Vessels"
+  },
+  {
+    "id": "seafarers",
+    "icon": "people",
+    "value": 420,
+    "label": "Seafarers"
+  },
+  {
+    "id": "trainees",
+    "icon": "training",
+    "value": 100,
+    "label": "Trainees"
+  }
+]
