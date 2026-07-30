@@ -13,5 +13,5 @@
   <img alt="Platform" src="https://img.shields.io/badge/Platform-Web-blue?style=flat-square">
   <img alt="Organization" src="https://img.shields.io/badge/Target-TMI-green?style=flat-square">
   <img alt="License" src="https://img.shields.io/badge/License-MIT-purple?style=flat-square">
-  <img alt="Status" src="https://img.shields.io/badge/Status-Paused-orange?style=flat-square">
+  <img alt="Status" src="https://img.shields.io/badge/Status-Under_Development-orange?style=flat-square">
 </p>
