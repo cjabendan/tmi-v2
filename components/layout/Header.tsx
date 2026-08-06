@@ -1,12 +1,9 @@
 "use client";
 
-import Image from "next/image";
-import { useState, useEffect } from "react";
-import logo from "../../public/assets/icons/logo/logo.png";
-
 import { Menu } from "lucide-react";
 import Button from "../ui/Button";
 import Link from "next/link";
+import { useState, useEffect } from "react";
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -23,54 +20,67 @@ export default function Header() {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
   return (
-    <div
-      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 border-b-[1px] ${
+    <header
+      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 border-b ${
         isScrolled
-          ? "bg-slate-950/20 backdrop-blur-md border-white/10"
+          ? "bg-slate-950/80 backdrop-blur-md border-white/10 shadow-lg"
           : "bg-transparent border-transparent"
       }`}
     >
-      <div className="mx-auto max-w-7xl flex items-center justify-between p-4">
-        <div className="flex items-center gap-1">
-          <Image
-            src={logo}
-            alt="TMI logo"
-            className="h-10 sm:h-12 w-auto object-contain"
-            priority
-          />
-          <div className="flex flex-col leading-tight text-white uppercase">
-            <h1 className="text-xl font-bold tracking-wider">TMI</h1>
-            <div className="hidden sm:block text-xs font-bold pl-1 tracking-wide text-white/80">
-              TUTELA MARINE INC.
-            </div>
-          </div>
+      <div
+        className={`w-full flex items-center justify-between px-4 sm:px-10 transition-all duration-300 ${
+          isScrolled ? "py-2.5 sm:py-4" : "py-4 sm:py-8"
+        }`}
+      >
+        <div className="flex flex-col leading-tight text-white uppercase">
+          <h1 className="text-xl sm:text-2xl font-bold tracking-wider">TMI</h1>
         </div>
-        <Button
-          variant="default"
-          icon={<Menu className="w-6 h-6" />}
-          className="block min-[840px]:hidden"
-        />
+        <div className="block sm:hidden">
+          <Button
+            variant="default"
+            icon={<Menu className="w-6 h-6" />}
+           
+          />
+        </div>
 
-        <div className="hidden min-[840px]:flex gap-5 items-center">
-          <Link href="#top" className="text-white hover:text-green-400">
+        <div className="hidden min-[840px]:flex gap-8 items-center rounded-lg bg-slate-700/10 backdrop-blur-md border border-white/10 shadow-lg overflow-hidden px-6 py-2">
+          <Link
+            href="#top"
+            className="text-sm font-medium text-white hover:text-green-400 transition-colors"
+          >
             Home
           </Link>
-          <Link href="#about" className="text-white hover:text-green-400">
-            About Us
+          <Link
+            href="#about"
+            className="text-sm font-medium text-white hover:text-green-400 transition-colors"
+          >
+            About
           </Link>
-          <Link href="#services" className="text-white hover:text-green-400">
+          <Link
+            href="#services"
+            className="text-sm font-medium text-white hover:text-green-400 transition-colors"
+          >
             Services
           </Link>
-          <Link href="#careers" className="text-white hover:text-green-400">
+          <Link
+            href="#careers"
+            className="text-sm font-medium text-white hover:text-green-400 transition-colors"
+          >
             Careers
           </Link>
-          <Link href="#contact" className="text-white hover:text-green-400">
-            Contact Us
+          <Link
+            href="#contact"
+            className="text-sm font-medium text-white hover:text-green-400 transition-colors"
+          >
+            Contact
           </Link>
+        </div>
+        <div className="hidden sm:block">
           <Button variant="primary">Apply Now</Button>
         </div>
       </div>
-    </div>
+    </header>
   );
 }

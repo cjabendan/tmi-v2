@@ -26,7 +26,7 @@ export default function Bottom() {
           </Link>
           <span className="inline text-white/20">|</span>
           <Link href="#terms" className="hover:text-white transition-colors">
-            Terms & condition
+            Terms & Conditions
           </Link>
         </div>
       </div>

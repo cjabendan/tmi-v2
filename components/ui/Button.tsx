@@ -31,12 +31,12 @@ export default function Button({
       className={`${baseClasses} ${variantClasses} ${className}`}
       {...props}
     >
-      {icon && variant === "primary" && (
+      {icon && variant === "default" && (
         <span className="shrink-0 flex items-center">{icon}</span>
       )}
 
       <span className="block truncate">{children}</span>
-      {icon && variant !== "primary" && (
+      {icon && variant !== "default" && (
         <span className="shrink-0 flex items-center">{icon}</span>
       )}
     </button>
