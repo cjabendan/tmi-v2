@@ -4,9 +4,9 @@ import Hero from "@/components/sections/Hero";
 
 export default function Home() {
     return (
-    <div className="flex flex-col">
+    <div className="flex flex-col ">
       <Header />
-      <div className="min-h-screen bg-background">
+      <div className=" min-h-screen bg-background sm:p-4">
         <Hero />
       </div>
       <Footer />
