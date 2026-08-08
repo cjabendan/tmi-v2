@@ -2,7 +2,7 @@ import Button from "@/components/ui/Button";
 
 export default function Upper() {
   return (
-    <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-8 pb-12">
+    <div className="flex flex-col md:flex-row md:justify-between md:items-start pb-12">
       <h2 className="text-2xl sm:text-4xl font-medium max-w-md tracking-tight leading-snug">
         Your Trusted Partner in Marine Solutions — Securing Excellence at Sea.
       </h2>

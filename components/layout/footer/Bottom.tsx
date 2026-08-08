@@ -4,7 +4,7 @@ import React from "react";
 export default function Bottom() {
   return (
     <div className="w-full bg-maritime-gradient border-t border-white/10 py-4 sm:py-6 text-xs sm:text-sm text-white/80">
-      <div className="mx-auto max-w-7xl px-6 flex flex-col md:flex-row items-center justify-between gap-2 sm:gap-4 lg:px-8">
+      <div className="px-6 flex flex-col md:flex-row items-center justify-between gap-2 sm:gap-4 lg:px-8">
         <div className="flex flex-col sm:flex-row items-center gap-2 sm:gap-4">
           <p>© 2026 Tutela Marine Inc. All Rights Reserved.</p>
           <span className="hidden sm:inline text-white/20">|</span>
