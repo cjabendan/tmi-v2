@@ -16,7 +16,7 @@ function Hero() {
               Empowering Future Seafarers
             </span>
 
-            <h1 className="max-w-[820px] text-3xl md:text-5xl lg:text-7xl leading-[1.1] font-medium tracking-[2px] text-white uppercase drop-shadow-2xl">
+            <h1 className="max-w-[820px] text-3xl md:text-5xl lg:text-7xl leading-[1.1] font-semibold tracking-[2px] text-white uppercase drop-shadow-2xl">
               Dedicated provider of quality maritime solutions
             </h1>
           </div>
